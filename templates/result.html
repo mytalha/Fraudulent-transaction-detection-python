@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        
+        background-image: url("/static/images/cards.jpg"); 
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+    h1{
+      margin-top: 20px;
+      padding-top: 20px;
+      margin: auto 0;
+      font-size: 80px;
+      color: black;
+      align-items: right;
+    }
+    .fraud {
+        color: red;
+      }
+  
+    .legitimate {
+        color: green;
+      }
+p{
+    font-size: 40px;
+    
+}
+</style>
+  <title>Fraud Detection - Result</title>
+</head>
+<body>
+  <h1>Fraud Detection - Result</h1>
+  <p>{{ prediction }}</p>
+</body>
+</html>

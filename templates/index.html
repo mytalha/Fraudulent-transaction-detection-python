@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fraud Detection</title>
+ 
+  <style>
+    body {
+        
+        background-image: url("static/images/dollars.jpg"); 
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+    h1{
+      margin-top: 20px;
+      padding-top: 20px;
+      margin: auto 0;
+      font-size: 80px;
+      color: white;
+      align-items: right;
+    }
+
+    form {
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #555555;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      float: right;
+      Margin-top: 100px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+
+      align-items: center;
+      width: 50%;
+      padding: 10px;
+      margin: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: solid black 2px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    h1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+      .red-text {
+      color: red;
+  }
+  .green-text {
+      color: green;
+  }
+  </style>
+  
+</head>
+<body>
+  <h1>
+    <span class="red-text">Fraud</span>
+    <span class="green-text">Detection</span>
+</h1>
+    <form action="/predict" method="post" onsubmit="clearForm()">
+    <label for="trans_amt">Transaction Amount:</label>
+    <input type="text" id="trans_amt" name="trans_amt" required><br>
+
+    <label for="hour">Hour of Transaction (0-23):</label>
+    <input type="text" id="hour" name="hour" required><br>
+
+    <label for="history_30">Sum of Transaction Amounts in the Past 30 Days:</label>
+    <input type="text" id="history_30" name="history_30" required><br>
+
+    <label for="city_pop">City Population:</label>
+    <input type="text" id="city_pop" name="city_pop" required><br>
+
+    <label for="distance">Distance between Credit Card Holder and Merchant Location:</label>
+    <input type="text" id="distance" name="distance" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
